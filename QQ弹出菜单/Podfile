@@ -1,0 +1,4 @@
+platform :ios, ‘8.0’
+target ‘QQ弹出菜单’do
+pod "Masonry"
+end

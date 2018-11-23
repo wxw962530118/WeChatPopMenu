@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wf6-XV-vEK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wf6-XV-vEK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +33,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EwK-bg-MUZ">
+                                <rect key="frame" x="30" y="265.5" width="315" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qut-vc-cYf">
+                                        <rect key="frame" x="269" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="上居右"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EZ-i1-wZZ">
+                                        <rect key="frame" x="135" y="22.5" width="46" height="30"/>
+                                        <state key="normal" title="上居中"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGQ-B4-nrr">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="上居左"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86773437499999995" green="0.23383756650000001" blue="0.22211518120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9EZ-i1-wZZ" firstAttribute="top" secondItem="EwK-bg-MUZ" secondAttribute="top" constant="22.5" id="8mo-Ha-L8o"/>
+                                    <constraint firstItem="9EZ-i1-wZZ" firstAttribute="top" secondItem="bGQ-B4-nrr" secondAttribute="bottom" constant="-7.5" id="JMP-Me-vs1"/>
+                                    <constraint firstItem="qut-vc-cYf" firstAttribute="centerY" secondItem="9EZ-i1-wZZ" secondAttribute="centerY" id="LaB-VY-ZDE"/>
+                                    <constraint firstAttribute="height" constant="200" id="ba4-Z5-PZq"/>
+                                    <constraint firstItem="bGQ-B4-nrr" firstAttribute="leading" secondItem="EwK-bg-MUZ" secondAttribute="leading" id="voB-Sx-rIA"/>
+                                    <constraint firstItem="bGQ-B4-nrr" firstAttribute="top" secondItem="EwK-bg-MUZ" secondAttribute="top" id="wgy-zR-Odr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EwK-bg-MUZ" secondAttribute="trailing" constant="30" id="1Rq-lr-Eh2"/>
+                            <constraint firstItem="EwK-bg-MUZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7g7-n7-S08"/>
+                            <constraint firstItem="EwK-bg-MUZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eQh-pa-rGx"/>
+                            <constraint firstItem="EwK-bg-MUZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="nFI-ha-awM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="仿微信/QQ弹出菜单" id="iOa-zI-Jvw">

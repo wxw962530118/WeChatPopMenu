@@ -12,19 +12,19 @@
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 
 @interface ViewController ()
-
+/***/
+@property (nonatomic, strong) NSArray * titlesArray;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.titlesArray = @[@"创建群聊",@"加好友/群",@"扫一扫",@"面对面快传",@"付款",@"拍摄"];
 }
 
 - (IBAction)popMenuView:(id)sender {
-    NSArray * titlesArray = @[@"创建群聊",@"加好友/群",@"扫一扫",@"面对面快传",@"付款",@"拍摄"];
-    [MenuView showMenuViewWithTitleArray:titlesArray imagesArray:nil frame:CGRectMake((kScreenW - 170), 80,150, 250) style:MenuViewStyleBlack arrowDirection:ArrowDirectionTopRight callBack:^(NSInteger index) {
+    [MenuView showMenuViewWithTitleArray:self.titlesArray imagesArray:nil frame:CGRectMake((kScreenW - 170), 80,150, 250) style:MenuViewStyleBlack arrowDirection:ArrowDirectionTopRight callBack:^(NSInteger index) {
         
     }];
 }
